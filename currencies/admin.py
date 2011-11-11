@@ -4,7 +4,7 @@ from currencies.models import Currency
 
 
 class CurrencyAdmin(admin.ModelAdmin):
-    list_display = ('code', 'name', 'symbol', 'factor', 'is_default',
+    list_display = ('code', 'name', 'symbol', 'factor', 'decimal_places', 'is_default',
                     'is_active')
     list_display_links = ('code', 'name', 'symbol')
 

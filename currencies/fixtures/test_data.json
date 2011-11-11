@@ -22,5 +22,18 @@
             "is_default": false, 
             "factor": "1.5"
         }
+    },
+    {
+        "pk": 3, 
+        "model": "currencies.currency", 
+        "fields": {
+            "code": "CLP", 
+            "name": "Chilean Pesos", 
+            "symbol": "$",
+            "decimal_places": 0, 
+            "is_active": true, 
+            "is_default": false, 
+            "factor": "1"
+        }
     }
 ]

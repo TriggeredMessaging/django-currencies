@@ -9,14 +9,17 @@ register = template.Library()
 
 def _calculate_price(price, currency):
     try:
-        factor = Currency.objects.get(code__exact=currency).factor
+        currency = Currency.objects.get(code__exact=currency)
+        factor = currency.factor
+        places = "1." + ("0" * currency.decimal_places)
     except Currency.DoesNotExist:
         if settings.DEBUG:
             raise Currency.DoesNotExist
         else:
             factor = Decimal('0.0')
+            places = "1.00"
     new_price = Decimal(price) * factor
-    return new_price.quantize(Decimal('.01'), rounding=ROUND_UP)
+    return new_price.quantize(Decimal(places), rounding=ROUND_UP)
 
 
 @register.filter(name='currency')

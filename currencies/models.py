@@ -6,6 +6,8 @@ class Currency(models.Model):
     code = models.CharField(max_length=3, primary_key=True)
     name = models.CharField(max_length=25)
     symbol = models.CharField(max_length=1)
+    decimal_places = models.IntegerField(default=2,
+        help_text=_('Specifies the decimal places of the currency'))
     factor = models.DecimalField(max_digits=10, decimal_places=6,
         help_text=_('Specifies the difference of the currency to default one.'))
     is_active = models.BooleanField(default=True,
@@ -25,7 +27,5 @@ class Currency(models.Model):
             defaults = Currency.objects.filter(is_default=True)
             if self.pk:
                 defaults = defaults.exclude(pk=self.pk)
-            for currency in defaults:
-                currency.is_default = False
-                currency.save()
+            defaults.update(is_default=False)
         super(Currency, self).save(**kwargs)

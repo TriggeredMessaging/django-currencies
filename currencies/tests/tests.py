@@ -12,6 +12,15 @@ class TemplateTagTest(TestCase):
     def setUp(self):
         self.template = '{% load currency %}'
 
+    def test_currency_with_0_decimal_places(self):
+        t = template.Template(self.template +
+            '{{ 10.3|currency:"CLP" }}'
+        )
+        c = template.Context()
+        s = t.render(c)
+        self.assertEqual(s, u'11')
+
+
     def test_currency_filter(self):
         t = template.Template(self.template +
             '{{ 10|currency:"USD" }}'
