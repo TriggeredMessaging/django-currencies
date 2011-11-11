@@ -1,0 +1,38 @@
+{% load currency %}
+<!doctype html>
+<html>
+<body>
+
+<h2>Context Processor</h2>
+<ul>
+    <li>{{ CURRENCIES }}</li>
+    <li>{{ CURRENCY }}</li>
+</ul>
+
+<h2>Templatetags</h2>
+<ul>
+    <li>{% change_currency '123.0001' 'CLP' %}</li>
+    <li>{% change_currency '125.5' CURRENCY.code %}</li>
+</ul>
+
+<h2>Filters</h2>
+<ul>
+    <li>{{ '125'|currency:'CLP' }}</li>
+</ul>
+
+<h2>Views</h2>
+<form id="currency_switcher" method="POST" action="{% url currencies_set_currency %}">{% csrf_token %}
+        <select name="currency">
+        {% for curr in CURRENCIES %}
+                <option value="{{ curr.code }}"
+                    {% ifequal curr.code currency.code %}selected="selected"{% endifequal %}>
+                            {{ curr.symbol }} {{ curr.code }} - {{ curr.name }}
+                </option>
+        {% endfor %}
+        </select>
+        <input type="submit" value="Set" />
+</form>
+</h2>
+
+</body>
+</html>
