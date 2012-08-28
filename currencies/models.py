@@ -5,7 +5,7 @@ from django.utils.translation import gettext_lazy as _
 class Currency(models.Model):
     code = models.CharField(max_length=3, primary_key=True)
     name = models.CharField(max_length=25)
-    symbol = models.CharField(max_length=1)
+    symbol = models.CharField(max_length=5)
     decimal_places = models.IntegerField(default=2,
         help_text=_('Specifies the decimal places of the currency'))
     factor = models.DecimalField(max_digits=10, decimal_places=6,

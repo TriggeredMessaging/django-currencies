@@ -1,39 +1,113 @@
 [
     {
-        "pk": 1,
-        "model": "currencies.currency",
-            "fields": {
-            "code": "GBP",
-            "name": "Pounds Sterling",
-            "symbol": "\u00A3",
-            "decimal_places": 2,
-            "is_active": true,
-            "is_default": true,
-            "factor": "1"
+        "pk":1,
+        "model":"currencies.currency",
+        "fields":{
+            "code":"GBP",
+            "name":"Pounds Sterling",
+            "symbol":"\u00A3",
+            "decimal_places":2,
+            "is_active":true,
+            "is_default":true,
+            "factor":"1"
         }
     },
     {
-        "pk": 2,
-        "model": "currencies.currency",
-            "fields": {
-            "code": "EUR",
-            "name": "Euros",
-            "symbol": "\u20ac",
-            "decimal_places": 2,
-            "is_active": true,
-            "factor": "1"
+        "pk":2,
+        "model":"currencies.currency",
+        "fields":{
+            "code":"EUR",
+            "name":"Euros",
+            "symbol":"\u20ac",
+            "decimal_places":2,
+            "is_active":true,
+            "factor":"1"
         }
     },
     {
-        "pk": 3,
-        "model": "currencies.currency",
-            "fields": {
-            "code": "USD",
-            "name": "US Dollars",
-            "symbol": "\u0024",
-            "decimal_places": 2,
-            "is_active": true,
-            "factor": "1"
+        "pk":3,
+        "model":"currencies.currency",
+        "fields":{
+            "code":"USD",
+            "name":"US Dollars",
+            "symbol":"\u0024",
+            "decimal_places":2,
+            "is_active":true,
+            "factor":"1"
+        }
+    },
+
+    {
+        "pk":4,
+        "model":"currencies.currency",
+        "fields":{
+            "code":"AUD",
+            "name":"Australian Dollars",
+            "symbol":"\u0024",
+            "decimal_places":2,
+            "is_active":true,
+            "factor":"1"
+        }
+    },
+    {
+        "pk":5,
+        "model":"currencies.currency",
+        "fields":{
+            "code":"CHF",
+            "name":"Swiss Francs",
+            "symbol":"CHF",
+            "decimal_places":2,
+            "is_active":true,
+            "factor":"1"
+        }
+    },
+    {
+        "pk":6,
+        "model":"currencies.currency",
+        "fields":{
+            "code":"CAD",
+            "name":"Canadian Dollars",
+            "symbol":"\u0024",
+            "decimal_places":2,
+            "is_active":true,
+            "factor":"1"
+        }
+    },
+    {
+        "pk":7,
+        "model":"currencies.currency",
+        "fields":{
+            "code":"NOK",
+            "name":"Norway Krone",
+            "symbol":"\u0107\u0114",
+            "decimal_places":2,
+            "is_active":true,
+            "factor":"1"
+        }
+    },
+    {
+        "pk":8,
+        "model":"currencies.currency",
+        "fields":{
+            "code":"SEK",
+            "name":"Sweden Krona",
+            "symbol":"\u0101\u0114",
+            "decimal_places":2,
+            "is_active":true,
+            "factor":"1"
+        }
+    }
+    ,
+    {
+        "pk":9,
+        "model":"currencies.currency",
+        "fields":{
+            "code":"ZAR",
+            "name":"South Africa Rand",
+            "symbol":"\u0082",
+            "decimal_places":2,
+            "is_active":true,
+            "factor":"1"
         }
     }
 ]
