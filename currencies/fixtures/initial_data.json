@@ -79,7 +79,7 @@
         "fields":{
             "code":"NOK",
             "name":"Norway Krone",
-            "symbol":"\u0107\u0114",
+            "symbol":"kr",
             "decimal_places":2,
             "is_active":true,
             "factor":"1"
@@ -91,7 +91,7 @@
         "fields":{
             "code":"SEK",
             "name":"Sweden Krona",
-            "symbol":"\u0101\u0114",
+            "symbol":"kr",
             "decimal_places":2,
             "is_active":true,
             "factor":"1"
@@ -104,7 +104,7 @@
         "fields":{
             "code":"ZAR",
             "name":"South Africa Rand",
-            "symbol":"\u0082",
+            "symbol":"R",
             "decimal_places":2,
             "is_active":true,
             "factor":"1"
